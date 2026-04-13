@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9e9ed;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.conteudo-principal {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 120px; 
+  margin-bottom: 30px;
+}
+
+.botoes-menu-principal {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+.menu button,
+.botoes-menu-principal button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #1c2835;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu button:hover,
+.botoes-menu-principal button:hover {
+  background-color: #2a3f52;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.menu button:active,
+.botoes-menu-principal button:active {
+  background-color: #0f1b27;
+  transform: translateY(0);
+}
+
+
+.container-cartoes {
+  display: flex;
+  flex-direction: row;      
+  flex-wrap: wrap;          
+  justify-content: center;  
+  align-items: flex-start;
+  gap: 30px;                
+  width: 100%;              
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cartao {
+  width: 260px;              
+  background-color: #c2c2cc;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.cartao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #0056b3, #1c2835);
+}
+
+.cartao img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(135deg, #0e0e0e, #030303);
+  margin-bottom: 20px;
+}
+
+.cartao h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  color: #1c2835;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.cartao p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #0b0b0c;
+  text-align: center;
+}
+
+
+.pagina-inicial {
+  text-align: center;
+  width: 100%;
+}
+
+.pagina-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.pagina-contato form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.pagina-contato form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.pagina-contato form input, 
+.pagina-contato form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.pagina-contato form button {
+  background-color: #1c2835;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagina-contato form button:hover {
+  background-color: #2a3f52;
+}
+
+
+.rodape {
+  background-color: #d6d1d1;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: auto;
+}
+
+.logo-rodape {
+  width: 120px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.rodape h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111;
+}/* Slideshow.css */
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.slideshow img {
+  max-width: 600px; /* Você pode ajustar esse valor para o tamanho ideal */
+  width: 100%;
+  height: 400px; /* Sugiro fixar uma altura para a tela não dar "saltos" ao trocar de imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 2px; /* Espaçamento bem sutil entre os botões, como na sua imagem */
+  margin-top: 10px;
+}
+
+.controles button {
+  padding: 4px 12px;
+  cursor: pointer;
+  border: 1px solid #888;
+  background-color: #f9f9f9;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.controles button:hover {
+  background-color: #e5e5e5;
+}
